@@ -1,4 +1,3 @@
-
 services:
   - name: whoogle-search
     type: web
@@ -16,6 +15,7 @@ services:
     scaling:
       minInstances: 1
       maxInstances: 2
+      targetCPUPercent: 60  # Added this field
     disk:
       name: whoogle-data
       mountPath: /app/data
